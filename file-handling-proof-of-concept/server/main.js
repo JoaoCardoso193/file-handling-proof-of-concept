@@ -1,6 +1,7 @@
 import { Meteor } from "meteor/meteor";
 import { Accounts } from "meteor/accounts-base";
 import "./fileUpload";
+import "./serverMethods";
 
 const SEED_USERNAME_1 = "meteorite";
 const SEED_PASSWORD_1 = "password";

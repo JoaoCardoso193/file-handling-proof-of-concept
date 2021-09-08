@@ -31,7 +31,7 @@ if (Meteor.isServer) {
     });
     file.on("finish", function () {
       res.writeHead(200);
-      res.write(fileId);
+      res.write(fileId); //send back file ID
       res.end(); //end the respone
       //console.log('Finish uploading, time taken: ' + Date.now() - start);
     });
