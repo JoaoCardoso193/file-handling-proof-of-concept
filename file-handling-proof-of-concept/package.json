@@ -1,0 +1,27 @@
+{
+  "name": "file-handling-proof-of-concept",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "bcrypt": "^5.0.1",
+    "fs": "0.0.1-security",
+    "meteor-node-stubs": "^1.1.0",
+    "mime": "^2.5.2",
+    "process": "^0.11.10",
+    "sanitize-filename": "^1.6.3",
+    "svelte": "^3.38.2"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
