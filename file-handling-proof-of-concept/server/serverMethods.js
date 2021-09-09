@@ -6,8 +6,8 @@ Meteor.methods({
 
     if (user) {
       //check DOI
-      console.log(sourceDOI);
-      console.log(SourcesCollection.findOne({ DOI: sourceDOI }));
+      // console.log(sourceDOI);
+      // console.log(SourcesCollection.findOne({ DOI: sourceDOI }));
       if (SourcesCollection.findOne({ DOI: sourceDOI })) {
         throw new Meteor.Error("Source with same DOI already exists");
       } else {
@@ -19,7 +19,7 @@ Meteor.methods({
           DOI: sourceDOI,
         });
 
-        console.log(newSourceId);
+        console.log("new source ID: ", newSourceId);
 
         return newSourceId;
       }

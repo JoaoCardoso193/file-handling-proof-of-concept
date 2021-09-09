@@ -11,7 +11,7 @@ if (Meteor.isServer) {
     console.log("handler reached");
 
     fileId = FilesCollection.insert({ name: "file" });
-    console.log(fileId);
+    // console.log(fileId);
 
     var cwd = process.cwd().match(/.*file-handling-proof-of-concept\//)[0];
     if (cwd.length < 1) {
