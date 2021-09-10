@@ -5,10 +5,12 @@
     import { Meteor } from "meteor/meteor";
 
     let username = "";
+    let fileId = "";
 
     $m: {
         console.log(source.createdBy)
         username = Meteor.users.findOne({_id: source.createdBy}).username;
+        fileId = source.fileId;
     }
 </script>
 
@@ -20,5 +22,7 @@
     <p>Authors: {source.authors}</p>
     <br />
     <p>DOI: {source.DOI}</p>
-    <FileDisplay key={source.fileId} />
+    {#if fileId}
+        <FileDisplay key={fileId} />
+    {/if}
 </div>
