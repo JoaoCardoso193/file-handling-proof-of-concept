@@ -1,5 +1,6 @@
 <script>
 import FileUpload from "/imports/ui/FileUpload";
+import FileDisplay from "/imports/ui/FileDisplay";
 import LoginForm from "/imports/ui/LoginForm"
 let user;
 
@@ -15,6 +16,7 @@ $m: {
 {#if user}
   <button on:click={handleLogout}>Logout</button>
   <FileUpload />
+  <FileDisplay />
 {:else}
   <LoginForm />
 {/if}

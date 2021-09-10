@@ -63,7 +63,7 @@
     //in the future, a server-side alternative could be explored
     const uploadFile = () => {
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/uploadImage', true);
+        xhr.open('POST', '/uploadFile', true);
         xhr.send(file)
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
@@ -108,7 +108,7 @@
 </script>
 
 <div id="app">
-	<h1>Upload Source</h1>
+	<h2>Upload Source</h2>
     <form>
         <input type="text" name="title" placeholder="Enter source title" bind:value={sourceTitle}/>
         <input type="text" name="title" placeholder="Enter source Authors" bind:value={sourceAuthors}/>
