@@ -5,9 +5,6 @@ Meteor.methods({
     let user = Meteor.user();
 
     if (user) {
-      //check DOI
-      // console.log(sourceDOI);
-      // console.log(SourcesCollection.findOne({ DOI: sourceDOI }));
       if (SourcesCollection.findOne({ DOI: sourceDOI })) {
         throw new Meteor.Error("Source with same DOI already exists");
       } else {

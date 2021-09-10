@@ -7,11 +7,6 @@
     let fileId;
     let sourceId;
     let file;
-
-    //reactive vars
-    // $: file = null;
-    // $: sourceId = null;
-    // $: fileId = null; 
 	
     //change file on selection
 	const onFileSelected = (event) =>{

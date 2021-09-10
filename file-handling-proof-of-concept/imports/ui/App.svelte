@@ -1,7 +1,8 @@
 <script>
 import FileUpload from "/imports/ui/FileUpload";
-import FileDisplay from "/imports/ui/FileDisplay";
 import LoginForm from "/imports/ui/LoginForm"
+import Sources from "/imports/ui/Sources"
+
 let user;
 
 const handleLogout = () => {
@@ -16,7 +17,7 @@ $m: {
 {#if user}
   <button on:click={handleLogout}>Logout</button>
   <FileUpload />
-  <FileDisplay />
+  <Sources />
 {:else}
   <LoginForm />
 {/if}
